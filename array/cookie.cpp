@@ -1,8 +1,11 @@
 #include<vector>
 #include<algorithm>
 using namespace std;
+
+// TC= O(glogg + slogs)
+// SC= O(1)
+
 int assignCookie(vector<int> &greed, vector<int> &size) {
-	// Write your code here.
 	int i=0,j=0;
 	int g=greed.size();
 	int s=size.size();
