@@ -1,3 +1,7 @@
+#include<iomanip>
+#include<vector>
+#include<climits>
+using namespace std;
 class Solution {
 public:
     int findMin(vector<int>& nums) {
