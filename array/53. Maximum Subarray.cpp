@@ -4,7 +4,8 @@
 using namespace std;
 
 // Kadane's algorithm: find sum, get maximum among maxi and sum and if sum<0, sum=0 as sum cannot be negative
-
+// TC= O(n)
+// SC= O(1)
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
