@@ -4,6 +4,9 @@
 #include<algorithm>
 using namespace std;
 
+//select the word and push into a map where key is the sorted word (compare the sorted words first)
+// TC= O(n*klogk) -> sorting n strings with time klogk
+
 class Solution
 {
 public:
