@@ -4,6 +4,8 @@
 #include<map>
 
 // take a map, store freq, store map in a vector of pairs, sort vector freq in desc order, create string
+// TC= O(n logn)
+// SC= O(256) ~ O(1) -> since the map can store at most 256 characters (ascii series)
 
 using namespace std;
 string sortByFrequency(int n, string& s)
