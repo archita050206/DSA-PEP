@@ -12,6 +12,9 @@ using namespace std;
 // d->g
 // a->e
 
+// TC= O(n)
+// SC= O(1) // map can store atmost 256 characters
+
 class Solution {
 public:
     bool isIsomorphic(string s, string t) {
