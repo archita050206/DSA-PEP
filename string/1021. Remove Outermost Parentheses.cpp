@@ -1,6 +1,12 @@
 #include<stack>
 #include<string>
 using namespace std;
+
+// TC= O(n)
+// SC= O(n)
+// if stack is empty, push '(' and dont add to string, otherwise pop from stack and if stack doesnot become empty then add to string
+
+
 class Solution {
 public:
     string removeOuterParentheses(string s) {
