@@ -2,6 +2,13 @@
 #include<string>
 
 using namespace std;
+
+
+//tc-> 2^n
+// sc-> O(2^n) -> for vector
+// sc-> O(n) -> for recursion(levels)
+// start from i=1 to i=n, include an element, exclude another element, get sum
+
 class Solution {
 public:
 
