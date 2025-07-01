@@ -71,7 +71,7 @@ public:
             }
             t=t->next;
         }
-        return cnt;
+        return index;
     }
    void print(){
     if(!head)return;
@@ -98,10 +98,15 @@ int main(){
     ll.insert(5);
     ll.insert(1);
    ll.print();
+   cout<<endl;
    ll.update(5,15);
    ll.print();
+      cout<<endl;
+
    int last=ll.indexOfLast(9);
    cout<<last;
+      cout<<endl;
+
    int length=ll.length();
    cout<<length;
     
