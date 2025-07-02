@@ -25,9 +25,7 @@ class Solution {
         // code here
         vector<int>ans;
         
-        vector<int>v;
        
-        int n=arr.size();
     solve(0, arr, 0, ans);
     return ans;
     }
