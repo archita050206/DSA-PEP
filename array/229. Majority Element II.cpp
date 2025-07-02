@@ -6,7 +6,7 @@ using namespace std;
 //  whenever count is 0, increment the count to 1 and upgrade the majority element 
 //  else check if arr[i] and maj is same, else decrement by -1 
 // SC= O(1)
-// first pass gives me the lements, second pass gives me the true frequencies
+// first pass gives me the elements, second pass gives me the true frequencies
 
 class Solution {
 public:
