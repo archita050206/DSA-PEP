@@ -1,9 +1,11 @@
 #include<map>
 #include<climits>
 using namespace std;
+
+//get a map, add the jth characters, if the size of map is >=k then increment i, change the freq in the map accordingly
+
 int kDistinctChars(int k, string &str)
 {
-    // Write your code here
     int i=0,j=0,cnt=0,maxi=INT_MIN;
     int n=str.length();
     map<char,int>mp;
