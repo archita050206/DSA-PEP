@@ -3,23 +3,34 @@
 using namespace std;
 class MyQueue {
 public:
-stack<int>st1,st2;
+stack<int>st1;
+//stack<int>st2;
+
     MyQueue() {
         
     }
     
     void push(int x) {
-        while(!st1.empty()){
-            int v=st1.top();
-            st1.pop();
-            st2.push(v);
+        // while(!st1.empty()){
+        //     int v=st1.top();
+        //     st1.pop();
+        //     st2.push(v);
+        // }
+        // st1.push(x);
+        // while(!st2.empty()){
+        //     int v=st2.top();
+        //     st2.pop();
+        //     st1.push(v);
+        // }
+        if(st1.empty()){
+            st1.push(x);
+            return;
         }
-        st1.push(x);
-        while(!st2.empty()){
-            int v=st2.top();
-            st2.pop();
-            st1.push(v);
-        }
+        int v=st1.top();
+        st1.pop();
+        push(x);
+        st1.push(v);
+        return;
     }
 
     
