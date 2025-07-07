@@ -20,5 +20,13 @@ public:
         }
         reverse(ans.begin(),ans.end());
         return ans;
+        // string ans="";
+        // for(char c: s){
+        //     if(isdigit(c) && isalpha(ans.back())){
+        //         ans.pop_back();
+        //     }
+        //     else ans+=c;
+        // }
+        // return ans;
     }
 };
