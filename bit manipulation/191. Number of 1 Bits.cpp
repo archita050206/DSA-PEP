@@ -16,6 +16,13 @@ public:
         // }
         // return cnt;
 
+        //  while(n!=0){
+        //     int d=n%2;
+        //     if(d==1)cnt++;
+        //     n=n/2;
+        // }
+        // return cnt;
+
        
     }
 };
