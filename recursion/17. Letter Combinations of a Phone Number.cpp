@@ -1,8 +1,10 @@
 #include<vector>
 #include<string>
 #include<map>
-
 using namespace std;
+
+// TC= O(3^n)
+
 class Solution {
 public:
 
