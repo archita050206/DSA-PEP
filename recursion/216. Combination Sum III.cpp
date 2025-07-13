@@ -1,3 +1,5 @@
+#include<vector>
+using namespace std;
 class Solution {
 public:
     void solver(int idx, vector<int>&temp,vector<vector<int>>&ans, int k, int n){
