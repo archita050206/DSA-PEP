@@ -23,7 +23,7 @@ public:
         // TC= O(n)
         // SC =O(1)
 
-        //count-> to nullify opened brackets and size-> to nullify closed brackets
+        //count-> to nullptrify opened brackets and size-> to nullptrify closed brackets
         int size=0,count=0;
         for(char c: s){
             if(c=='('){

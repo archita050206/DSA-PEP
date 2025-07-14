@@ -8,7 +8,7 @@ public:
     Node(int val)
     {
         data = val;
-        next = prev = nullptr;
+        next = prev = nullptrptr;
     }
 };
 class Doubly
@@ -17,8 +17,8 @@ public:
     Node *head, *tail;
     Doubly()
     {
-        head = nullptr;
-        tail = nullptr;
+        head = nullptrptr;
+        tail = nullptrptr;
     }
     void insertAtTail(int val)
     {
@@ -98,8 +98,8 @@ public:
             
             Node *t=head;
             head=head->next;
-            head->prev=nullptr;
-            t->next=nullptr;
+            head->prev=nullptrptr;
+            t->next=nullptrptr;
             delete t;
             return;
         }
@@ -114,8 +114,8 @@ public:
             while(t->next){
                 t=t->next;
             }
-            t->prev->next=nullptr;
-            t->prev=nullptr;
+            t->prev->next=nullptrptr;
+            t->prev=nullptrptr;
             delete t;
             return;
             
@@ -125,10 +125,10 @@ public:
             t=t->next;
         }
         Node *n=t->next;
-        n->prev=nullptr;
+        n->prev=nullptrptr;
         t->next=n->next;
         n->next->prev=t;
-        n->next=nullptr;
+        n->next=nullptrptr;
         delete n;
         return;
     }

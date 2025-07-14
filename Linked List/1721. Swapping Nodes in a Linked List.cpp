@@ -6,8 +6,8 @@ struct ListNode
 
     ListNode *next;
 
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode() : val(0), next(nullptrptr) {}
+    ListNode(int x) : val(x), next(nullptrptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
@@ -17,7 +17,7 @@ public:
     ListNode *swapNodes(ListNode *head, int k)
     {
         if (!head)
-            return nullptr;
+            return nullptrptr;
         ListNode *first = head, *second = head, *temp = head;
 
         // int length=0;

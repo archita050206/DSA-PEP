@@ -3,8 +3,8 @@ struct ListNode
 {
     int val;
     ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode() : val(0), next(nullptrptr) {}
+    ListNode(int x) : val(x), next(nullptrptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
@@ -14,7 +14,7 @@ public:
     ListNode *middleNode(ListNode *head)
     {
         if (!head)
-            return nullptr;
+            return nullptrptr;
         // int cnt=0;
         // ListNode *t=head;
         // while(t){

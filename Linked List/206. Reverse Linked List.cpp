@@ -4,8 +4,8 @@
   struct ListNode {
       int val;
       ListNode *next;
-     ListNode() : val(0), next(nullptr) {}
-      ListNode(int x) : val(x), next(nullptr) {}
+     ListNode() : val(0), next(nullptrptr) {}
+      ListNode(int x) : val(x), next(nullptrptr) {}
      ListNode(int x, ListNode *next) : val(x), next(next) {}
  };
 
@@ -19,12 +19,12 @@ public:
 
     }
     ListNode* reverseList(ListNode* head) {
-        // if(!head)return nullptr;
+        // if(!head)return nullptrptr;
         // if(head && !head->next)return head;
-        // ListNode* prev=nullptr;
+        // ListNode* prev=nullptrptr;
         // ListNode* curr=head;
         
-        // ListNode* forward=nullptr;
+        // ListNode* forward=nullptrptr;
         // while(curr){
         //     forward=curr->next;
         //     curr->next=prev;
@@ -33,7 +33,7 @@ public:
         // }
         // return prev;
        
-        ListNode * ans=rev(head,nullptr);
+        ListNode * ans=rev(head,nullptrptr);
         return ans;
     }
 };

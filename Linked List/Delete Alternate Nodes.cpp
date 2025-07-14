@@ -6,7 +6,7 @@ struct Node
 
     Node(int x){
         int data = x;
-        next = nullptr;
+        next = nullptrptr;
     }
 };
 
