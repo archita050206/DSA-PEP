@@ -5,7 +5,7 @@ struct Node {
   struct Node *next;
   Node(int x) {
     data = x;
-    next = nullptrptr;
+    next = nullptr ;
   }
 };
 
@@ -15,7 +15,7 @@ class Solution {
     Node *removeDuplicates(Node *head) {
         if(!head||!head->next)return head;
         unordered_map<int,bool>mp;
-        Node *curr=head,*prev=nullptrptr;
+        Node *curr=head,*prev=nullptr ;
         while(curr){
             if(mp.count(curr->data)){
                 prev->next=curr->next;

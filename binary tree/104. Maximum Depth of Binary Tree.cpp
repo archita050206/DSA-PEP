@@ -6,8 +6,8 @@ using namespace std;
      int val;
      TreeNode *left;
      TreeNode *right;
-     TreeNode() : val(0), left(nullptrptr), right(nullptrptr) {}
-     TreeNode(int x) : val(x), left(nullptrptr), right(nullptrptr) {}    
+     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+     TreeNode(int x) : val(x), left(nullptr), right(nullptr ) {}    
      TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  };
  

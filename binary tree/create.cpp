@@ -7,14 +7,14 @@ class Node{
     Node *right;
     Node(int val){
         data=val;
-        left=right=nullptrptr;
+        left=right=nullptr ;
     }
 };
 class OP{
     public:
     Node *root;
     OP(){
-        root=nullptrptr;
+        root=nullptr ;
     }
     void insert(int val){
         Node *n=new Node(val);

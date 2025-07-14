@@ -9,7 +9,7 @@ struct Node {
 
     Node(int x) {
         data = x;
-        next = nullptrptr;
+        next = nullptr ;
     }
 };
 

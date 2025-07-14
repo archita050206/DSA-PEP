@@ -4,13 +4,13 @@ using namespace std;
   struct ListNode {
       int val;
       ListNode *next;
-      ListNode(int x) : val(x), next(nullptrptr) {}
+      ListNode(int x) : val(x), next(nullptr ) {}
   };
  
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        if(!head ||!head->next)return nullptrptr;
+        if(!head ||!head->next)return nullptr ;
 
         map<ListNode *, bool>mp;
         ListNode * t=head;
@@ -19,7 +19,7 @@ public:
             mp[t]=true;
             t=t->next;
         }
-        return nullptrptr;
+        return nullptr ;
 
         // ListNode* fast=head;
         // ListNode* slow=head;
@@ -37,7 +37,7 @@ public:
         //         return slow;
         //     }
         // }
-        // return nullptrptr;
+        // return nullptr ;
 
     }
 };

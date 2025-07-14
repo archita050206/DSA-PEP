@@ -8,7 +8,7 @@ public:
     Node(int data)
     {
         this->data = data;
-        this->next = nullptrptr;
+        this->next = nullptr ;
     }
 };
 
@@ -16,11 +16,11 @@ Node *deleteNode(Node *head, int key)
 {
     // Write your code here.
     if (!head)
-        return nullptrptr;
+        return nullptr ;
     if (head->next == head && head->data == key)
     {
         delete head;
-        return nullptrptr;
+        return nullptr ;
     }
     if (head->data == key)
     {
@@ -32,7 +32,7 @@ Node *deleteNode(Node *head, int key)
         Node *p = head;
         head = head->next;
         t->next = head;
-        p->next = nullptrptr;
+        p->next = nullptr ;
         delete p;
         return head;
     }
@@ -43,7 +43,7 @@ Node *deleteNode(Node *head, int key)
         if (first->data == key)
         {
             second->next = first->next;
-            first->next = nullptrptr;
+            first->next = nullptr ;
             delete first;
             break;
         }

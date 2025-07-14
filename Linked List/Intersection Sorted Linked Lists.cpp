@@ -7,7 +7,7 @@ struct Node
     Node(int val)
     {
         data=val;
-        next=nullptrptr;
+        next=nullptr ;
     }
 };
 
@@ -16,7 +16,7 @@ struct Node
 class Solution {
   public:
     Node* findIntersection(Node* head1, Node* head2) {
-        if(!head1 || !head2)return nullptrptr;
+        if(!head1 || !head2)return nullptr ;
         Node *i=head1, *j=head2;
         Node *head=new Node(0);
         Node *third=head;

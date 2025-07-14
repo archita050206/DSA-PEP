@@ -8,7 +8,7 @@ public:
     Node(int d)
     {
         data = d;
-        next = nullptrptr;
+        next = nullptr ;
     }
 };
 class MyLinkedList
@@ -17,7 +17,7 @@ public:
     Node *head;
     MyLinkedList()
     {
-        head = nullptrptr;
+        head = nullptr ;
     }
 
     

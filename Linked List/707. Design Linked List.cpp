@@ -6,7 +6,7 @@ public:
     Node(int d)
     {
         data = d;
-        next = nullptrptr;
+        next = nullptr ;
     }
 };
 class MyLinkedList
@@ -15,7 +15,7 @@ public:
     Node *head;
     MyLinkedList()
     {
-        head = nullptrptr;
+        head = nullptr ;
     }
 
     int get(int index)
@@ -99,7 +99,7 @@ public:
         if (index == 0)
         {
             Node *t = head;
-            head = head->next ? head->next : nullptrptr;
+            head = head->next ? head->next : nullptr ;
             delete t;
             return;
         }
@@ -112,7 +112,7 @@ public:
         if (!t || !t->next)
             return;
         Node *y = t->next;
-        t->next = t->next->next ? t->next->next : nullptrptr;
+        t->next = t->next->next ? t->next->next : nullptr ;
         delete y;
     }
 };

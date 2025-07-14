@@ -8,7 +8,7 @@
 
         Node(int data) {
             this -> data = data;
-            this -> next = nullptrptr;
+            this -> next = nullptr ;
         }
     };
 
@@ -18,14 +18,14 @@ Node *removeLoop(Node *head)
 {
     //TC = O(n)
     //SC= O(n)
-    // create a map, check if the next node is present in the map, if yes then make it to nullptrptr. If no then add that node itself to the map
+    // create a map, check if the next node is present in the map, if yes then make it to nullptr . If no then add that node itself to the map
 
-    // if(!head)return nullptrptr;
+    // if(!head)return nullptr ;
     // map<Node*, bool>mp;
     // Node *t=head;
     // while(t->next){
     //     if(mp.count(t->next)){
-    //         t->next=nullptrptr;
+    //         t->next=nullptr ;
     //         break;
     //     }
     //     else mp[t]=true;
@@ -50,7 +50,7 @@ Node *removeLoop(Node *head)
         while(t && t->next!=slow){
         t=t->next;
     }
-    if(t->next)t->next=nullptrptr;
+    if(t->next)t->next=nullptr ;
     break;
     
            

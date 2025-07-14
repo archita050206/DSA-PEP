@@ -6,8 +6,8 @@ using namespace std;
   struct ListNode {
       int val;
       ListNode *next;
-      ListNode() : val(0), next(nullptrptr) {}
-      ListNode(int x) : val(x), next(nullptrptr) {}
+      ListNode() : val(0), next(nullptr ) {}
+      ListNode(int x) : val(x), next(nullptr ) {}
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
  
@@ -41,7 +41,7 @@ public:
           t=t->next;
           }
         }
-        ListNode* h=nullptrptr;
+        ListNode* h=nullptr ;
         while(!st.empty()){
             // ListNode* v=st.top();
             // st.pop();

@@ -6,14 +6,14 @@ class Node{
     Node *next;
     Node(int val){
         data=val;
-        next=nullptrptr;
+        next=nullptr ;
     }
 };
 class Circular{
     public:
     Node *head;
     Circular(){
-        head=nullptrptr;
+        head=nullptr ;
     }
     void insert(int val){
         Node *n=new Node(val);
