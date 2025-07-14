@@ -11,10 +11,10 @@ public:
         long long diff=x & (-x);// get 2's complement, gives the position of the right most set bit
         for(int num: nums){
             if(diff&num){
-                a^=num; // if the & is not 0 then add in first
+                a^=num; // if the & is not 0 then add in first -> includes numbers with that bit set
             }
             else{
-                b^=num;// if and & is zero then add in this 
+                b^=num;// if and & is zero then add in this -> includes numbers with that bit not set
             }
         }
         return {a,b};
