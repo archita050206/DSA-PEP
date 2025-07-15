@@ -22,7 +22,7 @@ public:
       if(!root->left && !root->right){
           temp.push_back(root->data);
           ans.push_back(temp);
-          temp.pop_back();
+          //temp.pop_back(); -> not required as temp is passed by value, not reference
           return;
       }
         temp.push_back(root->data);
