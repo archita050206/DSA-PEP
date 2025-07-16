@@ -12,6 +12,16 @@ class Solution
 public:
 
     int isSumProperty(Node *root) {
+
+        /*
+        Recursive Approach
+        
+        if(!root || (!root->left && !root->right))return 1;
+        int left=root->left?root->left->data:0;
+        int right=root->right?root->right->data:0;
+        if((left+right)!=root->data)return 0;
+        return isSumProperty(root->left) && isSumProperty(root->right);
+        */
         
         if(!root)return 0;
         queue<Node *>q;
