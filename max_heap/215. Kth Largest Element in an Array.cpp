@@ -3,6 +3,9 @@ using namespace std;
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
+        // TC= O(nlogn)
+        // SC= O(n)
+
         // priority_queue<int, vector<int>, greater<int>>pq(nums.begin(),nums.end());
         // while(pq.size()>k){
         //     pq.pop();
@@ -15,6 +18,8 @@ public:
         // }
         // return pq.top();
 
+        // TC= O(nlogk)
+        // SC= O(k)
         priority_queue<int, vector<int>, greater<int>>pq;
         for(int i: nums){
             pq.push(i);
