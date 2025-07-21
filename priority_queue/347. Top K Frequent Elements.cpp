@@ -20,11 +20,19 @@ public:
         // for(int i=0;i<k;i++){
         //     ans.push_back(v[i].first);
         // }
-        priority_queue<pair<int,int>>pq;
-        for(auto p: mp){
+        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
+        // for(auto p: mp){
+        //     pq.push({p.second,p.first});
+        // }
+        // for(int i=0;i<k;i++){
+        //     ans.push_back(pq.top().second);
+        //     pq.pop();
+        // }
+        for(auto p:mp){
             pq.push({p.second,p.first});
+            if(pq.size()>k)pq.pop();
         }
-        for(int i=0;i<k;i++){
+        while(!pq.empty()){
             ans.push_back(pq.top().second);
             pq.pop();
         }
