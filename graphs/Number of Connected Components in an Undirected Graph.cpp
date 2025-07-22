@@ -3,14 +3,32 @@
 
 using namespace std;
 class Solution {
-  public:
-    void dfs(int node, vector<bool>&visited,vector<vector<int>>& adj){
-        if(visited[node])return;
+public:
+
+    // void dfs(int node, vector<bool>&visited,vector<vector<int>>& adj){
+    //     if(visited[node])return;
+    //     visited[node]=true;
+    //     for(auto &i: adj[node]){
+    //         dfs(i,visited,adj);
+    //     }
+    // }
+
+    void bfs(int node, vector<bool>&visited,vector<vector<int>>& adj){
+        queue<int>q;
+        q.push(node);
         visited[node]=true;
-        for(auto &i: adj[node]){
-            dfs(i,visited,adj);
+        while(!q.empty()){
+            int x=q.front();
+            q.pop();
+           for(auto &i: adj[x]){
+            if(!visited[i]){
+                q.push(i);
+                visited[i]=true;
+            }
+           }
         }
-    }
+     }
+
     int countComponents(int n, vector<vector<int>>& edges) {
         vector<vector<int>>adj(n);
         for(int i=0;i<edges.size();i++){
@@ -24,11 +42,11 @@ class Solution {
 
         for(int i=0;i<n;i++){
             if(!visited[i]){
-                dfs(i, visited,adj);
+                bfs(i, visited,adj);
                 cnt++;
             }
             
         }
         return cnt;
     }
-};  
+};
