@@ -28,6 +28,24 @@ class Solution {
             }
         }
         return ans;
+        vector<int>ans;
+        
+    // vector<bool>visited(n,false);
+    // queue<int>q;
+    // q.push(0);
+    // visited[0]=true;
+    // while(!q.empty()){
+    //     int x=q.front();
+    //     q.pop();
+    //     ans.push_back(x);
+    //     for(auto &i: adj[x]){
+    //         if(!visited[i]){
+    //             q.push(i);
+    //             visited[i]=true;
+    //         }
+    //     }
+    // }
+    // return ans;
         
     }
 };
