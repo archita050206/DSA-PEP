@@ -25,6 +25,16 @@ class Solution {
         return false;
         
     }
+    bool dfs(int node, vector<bool>&visited,int parent, vector<vector<int>>&adj ){
+        visited[node]=true;
+        for(auto & child: adj[node]){
+            if(!visited[child]){
+                if(dfs(child,visited,node,adj))return true;
+            }
+            else if(visited[child] &&  child!=parent)return true;
+        }
+        return false;
+    }
     bool isCycle(int V, vector<vector<int>>& edges) {
         // Code here
         vector<vector<int>>adj(V);
@@ -39,6 +49,9 @@ class Solution {
             if(!visited[i]&& bfs(i,visited,adj)){
                 return true;
             }
+            // if(!visited[i] && dfs(i,visited,-1,adj)){
+            //     return true;
+            // }
         }
         return false;
         
