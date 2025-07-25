@@ -1,6 +1,7 @@
 #include<unordered_map>
 #include<queue>
 #include<vector>
+#include<algorithm>
 using namespace std;
 vector<int> shortestPath( vector<pair<int,int>> edges , int n , int m, int s , int t){
 	
