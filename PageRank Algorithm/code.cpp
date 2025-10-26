@@ -34,26 +34,28 @@ void mergeSort(vector<pair<char, double>>& pages, int l, int r) {
 void ranking(vector<double>& pr, vector<double> &new_pr, vector<vector<int>> &link, int n){
     double d = 0.85;       
     double eps = 0.0001;
-    while (true) {
-        for (int i=0;i<n;i++) {
-            new_pr[i]=(1 - d) / n; 
-            for (int j= 0;j<n;j++) {
-                int outlinks=0;
-                for (int k =0; k< n;k++)
-                    outlinks +=link[j][k];
 
-                if (link[j][i]&&outlinks > 0)
-                    new_pr[i]+=d*pr[j]/outlinks;
+     vector<int> outlinks(n, 0);
+    for (int j = 0; j < n; j++)
+        for (int k = 0; k < n; k++)
+            outlinks[j] += link[j][k];
+
+    while (true) {
+        for (int i =0; i<n;i++) {
+            new_pr[i]= (1-d)/n;
+            for (int j= 0;j <n;j++) {
+                if (link[j][i] &&outlinks[j]>0)
+                    new_pr[i]+= d* pr[j]/outlinks[j];
             }
         }
 
-        double diff = 0;
-        for (int i =0; i< n;i++)
-            diff+=abs(new_pr[i] - pr[i]);
-        if (diff < eps)
+        double diff=0;
+        for (int i=0;i<n;i++)
+            diff +=abs(new_pr[i] - pr[i]);
+        if (diff<eps)
             break;
 
-        pr =new_pr; 
+        pr=new_pr;
     }
 }
 void sortPages(vector<double>& pr, int n) {
