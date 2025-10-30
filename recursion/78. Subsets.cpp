@@ -12,6 +12,8 @@ using namespace std;
 class Solution {
 public:
 
+    
+
     void solve(int i, vector<int>&temp,  vector<int>& nums,  vector<vector<int>>&v){
         if(i>=nums.size()){
             v.push_back(temp
@@ -29,6 +31,18 @@ public:
         vector<vector<int>>v;
         solve(0,temp,nums,v);
         return v;
+
+        // using bitwise operator
+        // vector<vector<int>>ans;
+        // int n=nums.size();
+        // for(long long i=0;i<(1LL<<n);i++){
+        //     vector<int>temp;
+        //     for(int j=0;j<n;j++){
+        //         if((i>>j)&1)temp.push_back(nums[j]);
+        //     }
+        //     ans.push_back(temp);
+        // }
+        // return ans;
 
     }
 };
