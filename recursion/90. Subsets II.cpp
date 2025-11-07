@@ -50,4 +50,3 @@ void solver(int i, vector<int>nums, vector<int>&temp,  vector<vector<int>>&ans,i
         
     }
 };
-};
