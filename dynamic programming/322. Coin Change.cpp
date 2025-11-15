@@ -1,6 +1,10 @@
 #include<vector>
 #include<climits>
 using namespace std;
+
+// TC--> O(n*amount)--> DP
+//TC--> O(coint^amount)-->recursion
+
 class Solution {
 public:
     int solver(int amount, vector<int>&coins, vector<int>&dp){
