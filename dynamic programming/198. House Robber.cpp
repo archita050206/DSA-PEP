@@ -33,6 +33,7 @@ public:
         dp[1] = max(nums[0], nums[1]);
         for (int i = 2; i < n; i++)
         {
+            //  dp[i]=max(nums[i]+dp[i-2], dp[i-1]);
             int steal = nums[i] + dp[i - 2];
             int skip = dp[i - 1];
             dp[i] = max(steal, skip);
