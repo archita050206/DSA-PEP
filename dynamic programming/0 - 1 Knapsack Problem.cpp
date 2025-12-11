@@ -33,19 +33,14 @@ class Solution {
         int n=wt.size();
         vector<vector<int>>dp(n+1,vector<int>(W+1,-1));
         // return solver(wt, val, W, n,dp);
-        for(int i=0;i<=n;i++){
-            dp[i][0]=0;
-           
-        }
-        for(int i=0;i<=W;i++){
-            dp[0][i]=0;
-        }
         for(int i=1;i<=n;i++){
-            for(int j=1;j<=W;j++){
-                if(wt[i-1]<=j){
-                    dp[i][j]=max(val[i-1]+dp[i-1][j-wt[i-1]], dp[i-1][j]);
+            for(int w=1;w<=W;w++){
+                int skip=dp[i-1][w];
+                int take=0;
+                if(wt[i-1]<=w){
+                    take=val[i-1]+dp[i-1][w-wt[i-1]];
                 }
-                else dp[i][j]=dp[i-1][j];
+                dp[i][w]=max(take,skip);
             }
         }
         return dp[n][W];
