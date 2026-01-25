@@ -23,6 +23,7 @@ class Solution {
             int d=pq.top().first;
             int node=pq.top().second;
             pq.pop();
+            if(d>dist[node])continue;
             for(auto p: adj[node]){
                 int neigh=p.first;
                 int cost=p.second;
