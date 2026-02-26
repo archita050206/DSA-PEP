@@ -16,6 +16,21 @@ struct Node
 class Solution
 {
 public:
+    // void solver(Node *root, vector<int>&temp, vector<vector<int>>&ans){//--> passed by reference, less space required
+    //     if(!root)return;
+    //     temp.push_back(root->data);
+    //     if(!root->left && !root->right){
+    //         ans.push_back(temp);
+            
+    //     }
+    //     else{
+    //     solver(root->left,temp,ans);
+        
+    //     solver(root->right,temp,ans);
+        
+    //     }
+    //     temp.pop_back();
+    // }
     void solver(Node* root,vector<int>temp, vector<vector<int>>&ans){
       if(!root)
       {return;}
