@@ -20,7 +20,7 @@ class Disjoint{
         return parent[node];
 
     }
-    void unionByRank(int x, int y){
+    void unionByRank(int x, int y){// O(log n) for 1 ele
         int rootx=find(x);
         int rooty=find(y);
         if(rooty==rootx)return;
